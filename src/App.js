@@ -3,6 +3,7 @@ import "./App.css";
 import cereal1 from "./assets/cereal1.jpg";
 import cereal2 from "./assets/cereal2.jpg";
 import cereal3 from "./assets/cereal3.jpg";
+import ShopifyBuyButton from "./ShopifyBuyButton";
 
 const cereals = [
   {
@@ -87,16 +88,12 @@ function InfoBox({ cereal }) {
       </ul>
 
       <div className="quantity-box">
-        <p>Quantity</p>
-        <div className="quantity-selector">
-          <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>−</button>
-          <span>{quantity}</span>
-          <button onClick={() => setQuantity(quantity + 1)}>+</button>
-        </div>
+        
+       
         <p className="stock-status">In stock</p>
       </div>
 
-      <button className="preorder-btn">🛒 Pre Order</button>
+      <ShopifyBuyButton/>
 
       <div className="payment-icons">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/MasterCard-logo.png" alt="Mastercard" />
@@ -108,6 +105,7 @@ function InfoBox({ cereal }) {
     </div>
   );
 }
+
 
 
 function Footer() {
